@@ -4,7 +4,7 @@ void Application::run(unsigned int w, unsigned int h)
 {
 	m_ScreenWidth = w;
 	m_ScreenHeight = h;
-	m_Window.create(VideoMode(m_ScreenWidth, m_ScreenHeight), "App", Style::Default);
+	m_Window.create(VideoMode(m_ScreenWidth, m_ScreenHeight), "Paths", Style::Close);
 	m_Running = true;
 
 	m_Clock.restart();
@@ -64,6 +64,8 @@ void Application::update(Time delta)
 void Application::render()
 {
 	m_Window.clear(Color::Black);
+
+	m_Window.draw(m_Canvas);
 
 	m_Window.display();
 }

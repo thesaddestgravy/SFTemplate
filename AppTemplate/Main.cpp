@@ -9,6 +9,6 @@
 int main()
 {
 	Application app;
-	app.run(800, 600);
+	app.run(1700, 900);
 	return 0;
 }
